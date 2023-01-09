@@ -1,0 +1,27 @@
+html {
+    box-sizing: content-box;
+}
+
+/* con este bloque hacemos que todos los hijos de html hereden su propiedad de box-sizing */
+
+html * {
+    box-sizing: inherit;
+}
+
+/* la posición z-index no se aplica a menos q tenga position relative, por defecto todos los elementos tienen z-index de 1. Con esto nos aseguramos q no va a desaparecer nuestro box-shadow al añadir otro elemento */
+header {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    padding: 22px;
+    box-shadow: 1px 2px 5px rgb(0,0,0,0.3);
+    position: relative;
+    z-index: 2;
+}
+
+header input {
+    outline: none;
+    border:solid 1px #eee;
+    padding: 10px 5px;
+    border-radius: 4px;
+}
